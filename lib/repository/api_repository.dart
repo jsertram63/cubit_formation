@@ -14,7 +14,7 @@ class ApiRepository {
     final response = await apiService.getPostData();
     final data = response?.data as List<dynamic>;
 
-    return data.map((post) => Post.fromJson(post)).toList();
+      return data.map((singlePost) => Post.fromMap(singlePost)).toList();
 
   }
 
